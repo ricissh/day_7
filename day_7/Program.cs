@@ -11,8 +11,48 @@ namespace day_7
             //ReizTabula();
             //UzLeju();
             //Zvaigznite();
-            Faktorialis();
-            Console.ReadLine();
+            //Faktorialis();
+            int izvele = 1;
+
+            while(izvele != 0)
+            {
+                Console.WriteLine("1- izvadit reizrekina tabulu");
+                Console.WriteLine("2- skaitit no 10 uz leju");
+                Console.WriteLine("3- izvadit zvaigznites");
+                Console.WriteLine("4- faktorialis");
+                Console.WriteLine("0- iziet");
+
+                string input = Console.ReadLine();
+                izvele = Convert.ToInt16(input);
+                switch (izvele)
+                {
+                    case 1:
+                        ReizTabula();
+                        break;
+                    case 2:
+                        UzLeju();
+                        break;
+                    case 3:
+                        Zvaigznite();
+                        break;
+                    case 4:
+                        Faktorialis();
+                        break;
+                    case 0:
+                        izvele = 0;
+                        break;
+                    default:
+                        Console.WriteLine("Ievade nav pareiza");
+                        break;
+
+                }
+            }
+
+
+
+
+
+           
         }
 
         static void ReizTabula()
